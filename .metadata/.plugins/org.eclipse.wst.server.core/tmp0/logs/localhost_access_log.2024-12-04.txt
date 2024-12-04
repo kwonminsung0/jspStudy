@@ -1,0 +1,8 @@
+127.0.0.1 - - [04/Dec/2024:11:19:07 +0900] "GET / HTTP/1.1" 404 807
+127.0.0.1 - - [04/Dec/2024:11:19:20 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:11:19:36 +0900] "GET /jspStudy/bbs/write.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:11:19:36 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:11:19:47 +0900] "POST /jspStudy/visitInsert HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:11:20:03 +0900] "GET /jspStudy/member/join.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:11:20:27 +0900] "POST /jspStudy/memberInsert HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:11:20:28 +0900] "GET /jspStudy/memberList HTTP/1.1" 200 2292
