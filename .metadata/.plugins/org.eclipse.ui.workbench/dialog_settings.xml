@@ -20,6 +20,8 @@
 		<item key="WizardFileSystemResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="false"/>
 		<item key="WizardFileSystemResourceExportPage1.STORE_RESOLVE_LINKED_RESOURCES_ID" value="false"/>
 		<list key="WizardFileSystemResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\minsu\OneDrive\바탕 화면\KH수업PPT\05.JSP\login_mvc1"/>
+			<item value="C:\Users\minsu\OneDrive\바탕 화면\KH수업PPT\05.JSP"/>
 			<item value="C:\dev\eclipseWorkspace"/>
 		</list>
 		<section name="FileSystemExportWizard.dialogBounds">

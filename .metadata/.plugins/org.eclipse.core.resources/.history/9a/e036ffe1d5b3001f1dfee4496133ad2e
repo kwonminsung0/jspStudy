@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="co.kh.dev.account.model.AccountDAO" %>
+<%@ page import="co.kh.dev.account.model.AccountVO" %>
+<%
+	String id = request.getParameter("id");
+	String pwd = request.getParameter("pwd");
+	//CRUD
+	AccountDAO ad = new AccountDAO();
+	AccountVO avo = new AccountVO(null, id, pwd);
+	AccountVO ravo = ad.selectLoginCheckDB(avo);
+	
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

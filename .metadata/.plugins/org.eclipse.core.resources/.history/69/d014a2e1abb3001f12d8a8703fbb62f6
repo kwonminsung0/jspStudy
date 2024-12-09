@@ -1,0 +1,16 @@
+<%@ page import="javax.servlet.http.HttpSession;" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	HttpSession session = request.getSession(false);
+	String id = (String) session.getAttribute("id");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>login</title>
+</head>
+<body>
+
+</body>
+</html>

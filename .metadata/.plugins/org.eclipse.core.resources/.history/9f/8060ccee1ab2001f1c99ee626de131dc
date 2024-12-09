@@ -1,0 +1,85 @@
+package co.kh.dev.login;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet("/joinServlet.do")
+public class JoinServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter out = response.getWriter();
+		try {
+			HttpSession session = request.getSession(false);
+			if (session != null) {
+				System.out.println("세션고유아이디" + session.getId());
+				String name = (String) session.getAttribute("name");
+				String id = (String) session.getAttribute("id");
+				String pass = (String) session.getAttribute("pass");
+				
+				out.println("<html>");
+				out.println("<head><title>회원 리스트</title></head>");
+				out.println("<body>");
+				out.println("<table align=center width=300 border=1>");
+				out.println("<tr>");
+				out.println("<th width=70>이름</th>");
+				out.println("<td width=180 align=center>" + name + "</td>");
+				out.println("<th width=70>아이디</th>");
+				out.println("<td width=180 align=center>" + id + "</td>");
+				out.println("<th width=70>비밀번호</th>");
+				out.println("<td width=180 align=center>" + pass + "</td>");
+				out.println("</tr>");
+			}else {
+				out.println("<html>");
+				out.println("<body>");
+				out.print("<form method='post' action='/jspStudy/joinServlet.do'>");
+				out.println("<table border='1' width='300'>");
+				out.println("<tr>");
+				out.println("<th width='100'>이름</th>");
+				out.println("<td width='200'>&nbsp;<input type='text' name='id'></td>");
+				out.println("</tr>");
+				out.println("<tr>");
+				out.println("<th width='100'>아이디</th>");
+				out.println("<td width='200'>&nbsp;<input type='text' name='id'></td>");
+				out.println("</tr>");
+				out.println("<tr>");
+				out.println("<th width='100'>비번</th>");
+				out.println("<td width='200'>&nbsp;<input type='password' name='pass'></td>");
+				out.println("</tr>");
+				out.println("<tr>");
+				out.println("<td align='center' colspan='2'>");
+				out.println("<input type='submit' value='가입하기'>");
+				out.println("</td>");
+				out.println("</tr>");
+				out.println("</form>");
+				out.println("</table>");
+				out.println("</body>");
+				out.println("</html>");
+			}
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		} finally {
+			if (out != null) {
+				out.close();
+			}
+		}
+		
+	}
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		processRequest(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		processRequest(request, response);
+	}
+}

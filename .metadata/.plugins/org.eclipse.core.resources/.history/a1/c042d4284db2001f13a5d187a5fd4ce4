@@ -1,0 +1,82 @@
+package co.kh.dev.login;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet("/joinInsert.do")
+public class JoinInsert extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("포스트 작동");
+		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
+		String name = request.getParameter("name");
+		String id = request.getParameter("id");
+		String pass = request.getParameter("pass");
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		boolean successFlag = false;
+		String url = "jdbc:oracle:thin:@127.0.0.1:1521/xe";
+		String JOIN_INSERT = "INSERT INTO join VALUES(join_seq.NEXTVAL, ?, ?, ?)";
+		try {
+			HttpSession session = request.getSession(false);
+			if(session != null) {
+				System.out.println("세션고유아이디" + session.getId());
+				name = (String) session.getAttribute("name");
+				id = (String) session.getAttribute("id");
+				pass = (String) session.getAttribute("pass");
+			}
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			con = DriverManager.getConnection(url, "webuser", "123456");
+			pstmt = con.prepareStatement(JOIN_INSERT);
+			pstmt.setString(1, name);
+			pstmt.setString(2, id);
+			pstmt.setString(3, pass);
+			int count = pstmt.executeUpdate();
+			successFlag = (count != 0) ? (true) : (false);
+		} catch (ClassNotFoundException e) {
+			System.out.println(e.toString());
+		} catch (SQLException e) {
+			System.out.println(e.toString());
+		} finally {
+			if (con != null) {
+				try {
+					con.close();
+				} catch(SQLException e) {
+					System.out.println(e.toString());
+				}
+			}
+			if (pstmt != null) {
+				try {
+					pstmt.close();
+				} catch (SQLException e) {
+					System.out.println(e.toString());
+				}
+			}
+		}
+		if (successFlag == true) {
+			System.out.println("입력성공");
+			response.sendRedirect("/jspStudy/joinList.do");
+		} else {
+			System.out.println("입력실패");
+		}
+	}
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		processRequest(request, response);
+	}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		processRequest(request, response);
+	}
+}
