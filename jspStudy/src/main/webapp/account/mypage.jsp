@@ -20,18 +20,16 @@ String pwd = (String) session.getAttribute("pwd");
 	<h1 align='center'>마이페이지</h1>
 	<table align='center' width='300' border='1'>
 		<tr>
-			<td align='center'>이름 = <%=name%></td>
+			<td align='center'>이름 = <%= name %></td>
 		</tr>
 		<tr>
-			<td align='center'>id = <%=id%></td>
+			<td align='center'>id = <%= id %></td>
 		</tr>
 		<tr>
-			<td align='center'>비밀번호 = <%=pwd%></td>
+			<td align='center'>비밀번호 = <%= pwd %></td>
 		</tr>
 		<tr>
 			<td align='center'>
-			<a href='/jspStudy/account/member_update.jsp'>
-			<input type='button' value='회원정보수정'></a>&nbsp;
 			<a href='/jspStudy/account/login.jsp'>
 			<input type='button' value='로그인으로가기'></a></td>
 		</tr>

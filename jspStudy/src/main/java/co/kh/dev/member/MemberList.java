@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//@WebServlet(name = "memberList", urlPatterns = { "/memberList" })
+@WebServlet(name = "memberList", urlPatterns = { "/memberList" })
 public class MemberList extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -47,10 +47,7 @@ public class MemberList extends HttpServlet {
 				int no = rs.getInt("no");
 				String name = rs.getString("name");
 				String id = rs.getString("id");
-				String pw = rs.getString("pw");
-				String phone = rs.getString("phone");
-				String birth = rs.getString("birth");
-				java.sql.Date joinDate = rs.getDate("joinDate");
+				String pass = rs.getString("pw");
 				out.println("<tr>");
 				out.println("<th width=50>번호</th>");
 				out.println("<td width=50 align=center>" + no + "</td>");
@@ -59,13 +56,7 @@ public class MemberList extends HttpServlet {
 				out.println("<th width=70>아이디</th>");
 				out.println("<td width=180 align=center>" + id + "</td>");
 				out.println("<th width=70>비밀번호</th>");
-				out.println("<td width=180 align=center>" + pw + "</td>");
-				out.println("<th width=70>전화번호</th>");
-				out.println("<td width=180 align=center>" + phone + "</td>");
-				out.println("<th width=70>생년월일</th>");
-				out.println("<td width=180 align=center>" + phone + "</td>");
-				out.println("<th width=50>가입날짜</th>");
-				out.println("<td width=100 align=center>" + joinDate + "</td>");
+				out.println("<td width=180 align=center>" + pass + "</td>");
 				out.println("</tr>");
 			}
 			out.println("</table>");

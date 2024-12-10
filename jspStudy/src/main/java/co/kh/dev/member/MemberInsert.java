@@ -31,24 +31,20 @@ public class MemberInsert extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String name = request.getParameter("name");
 		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		String phone = request.getParameter("phone");
-		String birth = request.getParameter("birth");
+		String pass = request.getParameter("pw");
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		boolean successFlag = false;
 		String url = "jdbc:oracle:thin:@127.0.0.1:1521/xe";
-		String JOIN_INSERT = "INSERT INTO join VALUES(join_seq.NEXTVAL, ?, ?, ?, ?, ?, SYSDATE)";
+		String JOIN_INSERT = "INSERT INTO join VALUES(join_seq.NEXTVAL, ?, ?, ?)";
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			con = DriverManager.getConnection(url, "webuser", "123456");
 			pstmt = con.prepareStatement(JOIN_INSERT);
 			pstmt.setString(1, name);
 			pstmt.setString(2, id);
-			pstmt.setString(3, pw);
-			pstmt.setString(4, phone);
-			pstmt.setString(5, birth);
+			pstmt.setString(3, pass);
 			int count = pstmt.executeUpdate();
 			successFlag = (count != 0) ? (true) : (false);
 		} catch (ClassNotFoundException e) {
@@ -73,7 +69,7 @@ public class MemberInsert extends HttpServlet {
 		}
 		if (successFlag == true) {
 			System.out.println("입력성공");
-			response.sendRedirect("memberList");
+			response.sendRedirect("/jspStudy/memberList");
 		} else {
 			System.out.println("입력실패");
 		}
