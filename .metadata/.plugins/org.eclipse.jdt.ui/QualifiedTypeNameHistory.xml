@@ -12,4 +12,5 @@
     <fullyQualifiedTypeName name="co.kh.dev.common.DBUtility"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="co.kh.dev.account.model.AccountVO"/>
+    <fullyQualifiedTypeName name="co.kh.dev.signup.model.SignupVO"/>
 </qualifiedTypeNameHistroy>

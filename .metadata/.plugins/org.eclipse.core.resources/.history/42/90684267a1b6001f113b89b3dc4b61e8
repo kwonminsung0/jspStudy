@@ -1,0 +1,14 @@
+package co.kh.dev.tempmember.model;
+
+public class TempMemberVO {
+	private String id;//ID VARCHAR2(20), 
+	private String passwd;//PASSWD VARCHAR2(20), 
+	private String name;//NAME VARCHAR2(20), 
+	private String memNum1;//MEM_NUM1 VARCHAR2(6), 
+	private String memNum2;//MEM_NUM2 VARCHAR2(7), 
+	private String eMail;//E_MAIL VARCHAR2(30), 
+	private String phone;//PHONE VARCHAR2(30), 
+	private String zipcode;//ZIPCODE VARCHAR2(7), 
+	private String address;//DRESS VARCHAR2(60), 
+	private String job;//JOB VARCHAR2(30)
+}

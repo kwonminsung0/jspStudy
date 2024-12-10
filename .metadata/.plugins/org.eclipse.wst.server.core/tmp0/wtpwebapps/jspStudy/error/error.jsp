@@ -1,4 +1,4 @@
-<%@page import="java.lang.reflect.Executable"%>
+<%-- <%@page import="java.lang.reflect.Executable"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ page isErrorPage="true"%>
 <%
@@ -17,4 +17,4 @@
 <h2>에러타입 <%= exception.getClass().getName() %></h2>
 <h2>에러메세지 <%= exception.getMessage() %></h2>
 </body>
-</html>
+</html> --%>

@@ -1,0 +1,8 @@
+
+<%@ page contentType="text/html; charset=euc-kr"%>
+<%
+request.setAttribute("PAGETITLE", "정보보기");
+%>
+<jsp:forward page="/temp/template/template.jsp">
+	<jsp:param name="CONTENTPAGE" value="info_view.jsp" />
+</jsp:forward>
