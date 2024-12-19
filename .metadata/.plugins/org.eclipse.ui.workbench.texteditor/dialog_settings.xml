@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="hasShownOverlayPopupBefore" value="true"/>
-	<item key="replaceBarOpen" value="true"/>
+	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="TempMemberVO"/>
+		<item value="SignupVO"/>
 		<item value="mvo"/>
 		<item value="SIGNUPVO"/>
 		<item value="ACCOUNT"/>
 	</list>
 	<list key="replacehistory">
+		<item value="StudentVO"/>
+		<item value="TempMemberVO"/>
 		<item value="svo"/>
 		<item value="SignupVO"/>
 		<item value="SIGNUP"/>
 	</list>
+	<section name="org.eclipse.jst.jsp.ui.internal.preferences.ui.JSPTemplatePreferencePage$JSPEditTemplateDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="89"/>
+		<item key="DIALOG_Y_ORIGIN" value="139"/>
+		<item key="DIALOG_WIDTH" value="715"/>
+		<item key="DIALOG_HEIGHT" value="557"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
 </section>
