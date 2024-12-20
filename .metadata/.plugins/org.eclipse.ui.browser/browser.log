@@ -2,3 +2,30 @@
 12월 04, 2024 21:50:26.74 NEW SESSION
 12월 04, 2024 21:50:26.75 [30772:32228:1204/215026.743:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
 12월 04, 2024 21:50:26.88 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+12월 20, 2024 09:40:27.49 NEW SESSION
+12월 20, 2024 09:40:27.50 Created TensorFlow Lite XNNPACK delegate for CPU.
+12월 20, 2024 09:40:27.71 [18992:23952:1220/094027.715:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12월 20, 2024 09:40:48.11 [18992:23952:1220/094048.115:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12월 20, 2024 09:41:45.83 [18992:23952:1220/094145.834:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12월 20, 2024 09:43:32.75 [18992:23952:1220/094332.750:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12월 20, 2024 09:46:17.08 [18992:23952:1220/094617.082:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12월 20, 2024 09:51:54.86 [18992:23952:1220/095154.864:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12월 20, 2024 09:55:12.29 [18992:23952:1220/095512.291:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12월 20, 2024 09:56:36.26 [18992:23952:1220/095636.263:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12월 20, 2024 09:57:39.41 [18992:23952:1220/095739.414:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12월 20, 2024 09:58:42.33 [18992:23952:1220/095842.332:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12월 20, 2024 10:06:58.43 [18992:23952:1220/100658.439:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12월 20, 2024 10:17:56.90 [18992:18576:1220/101756.902:ERROR:device_event_log_impl.cc(201)] [10:17:56.891] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+12월 20, 2024 10:18:37.65 [18992:18576:1220/101837.649:ERROR:interface_endpoint_client.cc(725)] Message 1 rejected by interface blink.mojom.WidgetHost
+12월 20, 2024 10:55:35.87 [18992:23952:1220/105535.872:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12월 20, 2024 11:02:58.77 [18992:18576:1220/110258.769:ERROR:device_event_log_impl.cc(201)] [11:02:58.762] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+12월 20, 2024 11:16:57.27 Created TensorFlow Lite XNNPACK delegate for CPU.
+12월 20, 2024 11:16:57.36 [10352:21608:1220/111657.363:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12월 20, 2024 11:17:18.63 [10352:21608:1220/111718.629:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12월 20, 2024 11:18:08.08 [10352:21608:1220/111808.089:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12월 20, 2024 11:19:32.31 [10352:21608:1220/111932.314:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12월 20, 2024 11:23:06.86 [10352:21608:1220/112306.868:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12월 20, 2024 11:28:57.13 [10352:21608:1220/112857.128:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12월 20, 2024 11:50:14.29 [10352:21608:1220/115014.297:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12월 20, 2024 12:02:03.20 [10352:18048:1220/120203.205:ERROR:device_event_log_impl.cc(201)] [12:02:03.202] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
